@@ -12,8 +12,10 @@ import androidx.core.view.WindowInsetsCompat;
 
 import com.google.android.material.button.MaterialButton;
 
+
 public class LoginActivity extends AppCompatActivity {
-    MaterialButton abrir;
+    //declarar as váriaveis globais
+    MaterialButton btnRecuperarSenha, btnCadastrarSenha, btnEntrar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,12 +27,25 @@ public class LoginActivity extends AppCompatActivity {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
-        abrir = findViewById(R.id.btnEntrar);
 
-        abrir.setOnClickListener(new View.OnClickListener() {
+        //apresentando as variáveis do java para o xml
+        btnCadastrarSenha = findViewById(R.id.btnCadastrarSenha);
+        btnRecuperarSenha = findViewById(R.id.btnRecuperarSenha);
+        btnEntrar = findViewById(R.id.btnEntrar);
+
+        //criando as ações dos botões
+        btnCadastrarSenha.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(getApplicationContext(),SplashActivity.class));
+                startActivity(new Intent(getApplicationContext(), CadastrarSenhaActivity.class));
+                finish();
+            }
+        });
+
+        btnRecuperarSenha.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(getApplicationContext(),RecuperarSenhaActivity.class));
                 finish();
             }
         });

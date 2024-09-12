@@ -10,11 +10,11 @@
     tools:context=".LoginActivity">
 
     <ImageView
-        android:layout_marginTop="30dp"
-        android:layout_marginBottom="30dp"
         android:layout_width="150dp"
         android:layout_height="150dp"
         android:layout_gravity="center_horizontal"
+        android:layout_marginTop="30dp"
+        android:layout_marginBottom="30dp"
         android:scaleType="centerCrop"
         android:src="@drawable/logo" />
 
@@ -55,7 +55,7 @@
         android:layout_height="wrap_content">
 
         <com.google.android.material.button.MaterialButton
-            android:id="@+id/txtRecuperarSenha"
+            android:id="@+id/btnRecuperarSenha"
             style="@style/Widget.Material3.Button.OutlinedButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -64,7 +64,7 @@
             app:cornerRadius="0dp" />
 
         <com.google.android.material.button.MaterialButton
-            android:id="@+id/txtCadastrar"
+            android:id="@+id/btnCadastrarSenha"
             style="@style/Widget.Material3.Button.OutlinedButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -78,7 +78,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
-        android:text="Entar"
+        android:text="Entrar"
         app:cornerRadius="0dp" />
 
 </LinearLayout>
