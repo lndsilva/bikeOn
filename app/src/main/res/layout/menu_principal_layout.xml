@@ -73,7 +73,7 @@
                     android:layout_gravity="center_horizontal"
                     android:padding="10dp"
                     android:scaleType="centerCrop"
-                    android:src="@drawable/bike" />
+                    android:src="@drawable/motociclista" />
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -109,7 +109,7 @@
                     android:layout_gravity="center_horizontal"
                     android:padding="10dp"
                     android:scaleType="centerCrop"
-                    android:src="@drawable/bike" />
+                    android:src="@drawable/manutencao" />
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -139,7 +139,7 @@
                     android:layout_gravity="center_horizontal"
                     android:padding="10dp"
                     android:scaleType="centerCrop"
-                    android:src="@drawable/bike" />
+                    android:src="@drawable/dicas" />
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -175,7 +175,7 @@
                     android:layout_gravity="center_horizontal"
                     android:padding="10dp"
                     android:scaleType="centerCrop"
-                    android:src="@drawable/bike" />
+                    android:src="@drawable/localizacao" />
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -205,7 +205,7 @@
                     android:layout_gravity="center_horizontal"
                     android:padding="10dp"
                     android:scaleType="centerCrop"
-                    android:src="@drawable/bike" />
+                    android:src="@drawable/eventos" />
 
                 <TextView
                     android:layout_width="wrap_content"
