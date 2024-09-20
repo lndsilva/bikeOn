@@ -11,7 +11,7 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
-public class MenuPrincipalActivity extends AppCompatActivity implements View.OnClickListener {
+public class MenuPrincipalActivity extends AppCompatActivity {
 
     CardView bikes, acessorios, manutencao, dicas, locais, eventos;
 
@@ -25,26 +25,8 @@ public class MenuPrincipalActivity extends AppCompatActivity implements View.OnC
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
-        bikes = findViewById(R.id.menuBike);
-        acessorios = findViewById(R.id.menuAcessorios);
-        manutencao = findViewById(R.id.menuManutencao);
-        dicas = findViewById(R.id.menuDicas);
-        locais = findViewById(R.id.menuLocais);
-        eventos = findViewById(R.id.menuEventos);
 
-        bikes.setOnClickListener(this);
-        acessorios.setOnClickListener(this);
-        manutencao.setOnClickListener(this);
-        dicas.setOnClickListener(this);
-        locais.setOnClickListener(this);
-        eventos.setOnClickListener(this);
     }
 
-    @Override
-    public void onClick(View view) {
-        if (view.getId() == R.id.menuBike){
-            startActivity(new Intent(getApplicationContext(),BikesActivity.class));
-            finish();
-        }
-    }
+
 }
