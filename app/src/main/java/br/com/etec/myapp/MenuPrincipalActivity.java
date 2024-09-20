@@ -1,14 +1,19 @@
 package br.com.etec.myapp;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.cardview.widget.CardView;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
-public class MenuPrincipalActivity extends AppCompatActivity {
+public class MenuPrincipalActivity extends AppCompatActivity implements View.OnClickListener {
+
+    CardView bikes, acessorios, manutencao, dicas, locais, eventos;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -20,5 +25,26 @@ public class MenuPrincipalActivity extends AppCompatActivity {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
+        bikes = findViewById(R.id.menuBike);
+        acessorios = findViewById(R.id.menuAcessorios);
+        manutencao = findViewById(R.id.menuManutencao);
+        dicas = findViewById(R.id.menuDicas);
+        locais = findViewById(R.id.menuLocais);
+        eventos = findViewById(R.id.menuEventos);
+
+        bikes.setOnClickListener(this);
+        acessorios.setOnClickListener(this);
+        manutencao.setOnClickListener(this);
+        dicas.setOnClickListener(this);
+        locais.setOnClickListener(this);
+        eventos.setOnClickListener(this);
+    }
+
+    @Override
+    public void onClick(View view) {
+        if (view.getId() == R.id.menuBike){
+            startActivity(new Intent(getApplicationContext(),BikesActivity.class));
+            finish();
+        }
     }
 }
