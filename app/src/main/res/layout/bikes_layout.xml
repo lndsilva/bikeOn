@@ -3,19 +3,44 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
-    android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".BikesActivity">
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
-        android:layout_marginTop="10sp"
+        android:layout_marginTop="15sp"
+        android:layout_marginBottom="15sp"
         android:text="Bikes"
         android:textAllCaps="true"
         android:textColor="#E91E63"
         android:textSize="30sp"
         android:textStyle="bold" />
+
+    <com.google.android.material.tabs.TabLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.google.android.material.tabs.TabItem
+            android:id="@+id/idBikeNova"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Novas" />
+
+        <com.google.android.material.tabs.TabItem
+            android:id="@+id/idBikeUsadas"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Usadas" />
+
+        <com.google.android.material.tabs.TabItem
+            android:id="@+id/idBikeDoacao"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Doação" />
+
+    </com.google.android.material.tabs.TabLayout>
 </LinearLayout>
