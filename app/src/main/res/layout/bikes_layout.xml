@@ -44,4 +44,6 @@
             android:text="Doação" />
 
     </com.google.android.material.tabs.TabLayout>
+
+
 </LinearLayout>
