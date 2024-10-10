@@ -8,17 +8,20 @@
     android:orientation="vertical"
     tools:context=".BikesActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
-        android:layout_marginTop="15sp"
-        android:layout_marginBottom="15sp"
-        android:text="Bikes"
-        android:textAllCaps="true"
-        android:textColor="#E91E63"
-        android:textSize="30sp"
-        android:textStyle="bold" />
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/idToolBarBike"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:navigationIcon="@drawable/baseline_arrow_back"
+            app:title="Bike"
+            app:titleCentered="true"
+            app:titleTextColor="#E91E63" />
+    </com.google.android.material.appbar.AppBarLayout>
 
     <com.google.android.material.tabs.TabLayout
         android:id="@+id/idTabLayoutBikes"
