@@ -1,6 +1,8 @@
 package br.com.etec.myapp;
 
+import android.content.Context;
 import android.media.Image;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
@@ -10,16 +12,33 @@ import androidx.annotation.NonNull;
 import androidx.cardview.widget.CardView;
 import androidx.recyclerview.widget.RecyclerView;
 
+import java.util.List;
+
 public class RecyclerAdapterBikeNova extends RecyclerView.Adapter<RecyclerAdapterBikeNova.ViewHolder> {
+    private Context context;
+    private List<BikeNova> lstBikeNova;
+
+    public RecyclerAdapterBikeNova(Context context, List<BikeNova> lstBikeNova) {
+        this.context = context;
+        this.lstBikeNova = lstBikeNova;
+    }
 
     @NonNull
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        return null;
+        View view;
+
+        LayoutInflater inflater = LayoutInflater.from(context);
+        view = inflater.inflate(R.layout.modelo_bikes_novas, parent, false);
+        return new ViewHolder(view);
     }
 
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
+        holder.idModeloTituloBikeNova.setText(lstBikeNova.get(position).getTitulo());
+        holder.idModeloImagemBikeNova.setImageResource(lstBikeNova.get(position).getImagem());
+
+        //criando o click no cartão
 
     }
 
@@ -28,7 +47,7 @@ public class RecyclerAdapterBikeNova extends RecyclerView.Adapter<RecyclerAdapte
         return 0;
     }
 
-    public class ViewHolder extends RecyclerView.ViewHolder{
+    public class ViewHolder extends RecyclerView.ViewHolder {
         //Criando variável que irá representar o xml no java
         CardView idModeloBikeNova;
         ImageView idModeloImagemBikeNova;
