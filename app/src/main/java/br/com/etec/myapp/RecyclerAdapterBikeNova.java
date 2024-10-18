@@ -44,7 +44,7 @@ public class RecyclerAdapterBikeNova extends RecyclerView.Adapter<RecyclerAdapte
 
     @Override
     public int getItemCount() {
-        return 0;
+        return lstBikeNova.size();
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder {
